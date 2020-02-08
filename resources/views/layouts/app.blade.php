@@ -16,8 +16,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css"> -->
-    <!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.tiny.cloud/1/wc9xuhunuxv5qpukybytmevk53ebs3p13kot3s8hzuecvm2v/tinymce/5/tinymce.min.js"></script>
     <script>
     tinymce.init({
