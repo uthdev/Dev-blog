@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{asset('app.css')}}">
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+        <script src="https://cdn.tiny.cloud/1/wc9xuhunuxv5qpukybytmevk53ebs3p13kot3s8hzuecvm2v/tinymce/5/tinymce.min.js"></script>
+        <script>
+        tinymce.init({
+            selector: '#textarea',
+            widht: '100%',
+            height: 300,
+            plugins:    "link",
+            statusbar:  false,
+            toolbar:    "link"
+        });
+        </script>
+        <!-- <script>
+            tinymce.init({
+                selector:   "textarea",
+                width:      '100%',
+                height:     270,
+                plugins:    "link",
+                statusbar:  false,
+                toolbar:    "link"
+            });
+
+            // Prevent bootstrap dialog from blocking focusin
+            $(document).on('focusin', function(e) {
+                if ($(e.target).closest(".tox-tinymce-aux, .moxman-window, .tam-assetmanager-root").length) {
+                    e.stopImmediatePropagation();
+                }
+            });
+
+            $('#open').click(function() {
+                $("#dialog").modal({
+                    width: 800
+                });
+            });
+        </script> -->
+        <title>{{config('app.name', 'LSAPP')}}</title>
+    </head>
+    <body>
+        @include('inc.navbar')
+        <div class="container">
+            @include('inc.messages')
+            @yield('content')
+        </div>
+        
+    </body>
+</html>
